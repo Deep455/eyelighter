@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Eyelighter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./custom-blue.png" type="image/x-icon">
+    <meta name="description" content="Use the power of Machine Learning to diagnose TB from chest x-rays.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="nav-bar" data-aos="fade-in" data-aos-duration="700">
+        <a href="#">
+            <img src="./custom-blue.png" width="50px" height="50px" alt="Eyelighter">
+        </a>
+    </header>
+
+    <!-- loader -->
+    <div class="loader" data-aos="ease-in-out">
+        <div class="row">
+            <div class="progress-bar-wd">
+                <div class="progress-bar">Loading Model</div>
+            </div>
+        </div>
+    </div >
+
+    <div class="select-buttons"  data-aos-duration="1000">
+        <div class="buts-x">
+            <input id="image-selector" type="file">
+        </div>
+        <div class="buts-y">
+            <button id="predict-button" class="btn btn-primary float-right">Predict</button>
+        </div>
+    </div>
+
+    <!-- image content and its predictions -->
+    <div class="content">
+            <div class="cont-img" data-aos="fade-right" data-aos-duration="1400">
+                <h2 class="image-name">Image</h2>
+                <img class="selected-image" width="330" alt="No Image Selected">
+            </div>
+            <div class="cont-val" data-aos="fade-left" data-aos-duration="1400">
+                <h2 class="predict-name">Predictions</h2>
+                <div class="not-pedictions">No Predictions</div>
+                <table class="prediction-list"></table>
+            </div>
+    </div>
+
+    <!-- js links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="target_classes.js"></script>
+    <script src="predict.js"></script>
+</body>
+
+</html>

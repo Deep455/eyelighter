@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #019deb;
+    overflow: hidden;
+}
+
+.nav-bar {
+    height: 52px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1267ae;
+}
+
+
+.progress-bar-vw {
+    width: 90%;
+    height: 90%;
+    background: #019deb;
+}
+
+.loader{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color: #333;
+    background-color: #fff;
+}
+
+
+.select-buttons {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    color: #fff;
+    background-color:  #019deb;
+}
+
+.content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px;
+    margin: 20px 0px;
+    margin-top: 4.5vh;
+    text-align: center;
+}
+
+.cont-img, .cont-val {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.cont-img h2, .cont-val h2 {
+    color: white;
+    margin: 10px 0px;
+    font-size: 33px;
+}
+
+.not-pedictions {
+    width: 330px;
+    border: 5px solid #fff;
+    height: 232px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    color: #afafaf;
+    background-color:#e6e6e6;
+}
+
+@media (max-width: 700px) {
+    .select-buttons {
+        bottom: 0;
+        position: fixed;
+        background-color: #1267ae;
+    }
+    .content{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+}
+
+
+.selected-image {
+    margin: auto;
+    border: 5px solid #fff;
+}
+.prediction-list {
+    width: 330px;
+    height: fit-content;
+    overflow: hidden;
+    border: 3px solid #fff;
+}
+
+.tab-div {
+    width: 100%;
+    height: 52px;
+    color: #fff;
+    font-size: 16px;
+    border: 3px solid #fff;
+}
+
+.tab-div-val {
+    border: 3px solid #fff;
+}
+
+td {
+    height: 52px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
